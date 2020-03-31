@@ -8,8 +8,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {process.env.SOCKET_URL || 
-          "Nothing"}
+          {process.env.SOCKET_URL || "SOCKET_URL is empty"}
+        </p>
+        <p>
+          {process.env.BRANCH || 'BRANCH is empty'} 
         </p>
         <a
           className="App-link"

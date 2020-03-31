@@ -1,0 +1,4 @@
+[context.production]
+  command = "echo 'production' && npm run build"
+[context.production.environment]
+  BRANCH = "master"
