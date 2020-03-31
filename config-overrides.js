@@ -6,7 +6,7 @@ const findWebpackPlugin = (plugins, pluginName) =>
 const overrideProcessEnv = value => config => {
   const fs = require('fs')
   console.log('Before process.env.BRANCH', process.env.BRANCH);
-  fs.writeFileSync('./.env', `SOCKET_URL=${process.env.SOCKET_URL || 'localhost:8086'}\nAPI_URL=${process.env.API_URL}`);
+  fs.writeFileSync('./.env', `SOCKET_URL=${process.env.SOCKET_URL}\nBRANCH=${process.env.BRANCH}`);
     //   require('dotenv').config();  
   const Dotenv = require('dotenv-webpack');
   const dotenv = new Dotenv();
